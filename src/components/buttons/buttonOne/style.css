@@ -1,0 +1,39 @@
+.Btn1{
+    color:#fff;
+    background: linear-gradient(45deg,#b619ff,#2e0eff,#11f3ff);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.Btn1 span{position: relative;
+z-index: 1;}
+
+.Btn1::before{
+    inset: 3px;
+    border-radius: 0.9rem;
+    content: '';
+    position: absolute;
+    background: #333;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.Btn1:hover:before{
+    opacity: 0.7;
+}
+
+.Btn1::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg,#b619ff,#2e0eff,#11f3ff);
+    inset: 0;
+    opacity: 0;
+    filter:blur(2rem);
+    transition: opacity 0.75s;
+}
+
+.Btn1:hover:after{
+    opacity: 1;
+}
